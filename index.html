@@ -1,0 +1,931 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Vinicius Araujo - Desenovlvedor de aplicações digital">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Portfólio Desenvolvedor - Vinicius Araujo</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS --> 
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;900&display=swap" rel="stylesheet">
+  
+    <meta name="theme-color" content="#563d7c"> 
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134123452-1"></script>
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); 
+    gtag('config', 'UA-134123452-1');
+    </script>
+
+    <style>
+        div#accordionExample button:after {
+            content: " > ";
+            transform: rotate(90deg);
+            display: inline-block;
+            position: absolute;
+            right: 3px;
+        }
+        .overlay{
+            background: url(home-2.png);
+            width: 100%;
+            height:50vh;
+            background-size: contain;
+            position: fixed;  
+            bottom: 0;  
+        }
+       
+        body{  
+            font-family: 'Poppins', sans-serif; 
+            background: #10102f ;
+        }
+        h1{
+            font-size: 2rem !important;
+        }
+        
+        h1{font-weight: black;}
+        h2,h3 {
+            color: #e6e6e6;
+            max-width: 600px;
+        }
+        
+        h4 ,h5 {
+            color: #525273;
+        }
+        h1 {
+            color: white;
+            margin: 70px 0 40px;
+            font-size: 2.9em;
+            max-width: 600px;
+        }
+        strong{
+            color: #e5143a;
+            font-weight: 400;
+        }
+        li{ 
+            /* white-space: nowrap; */
+            list-style: none;
+        }
+        p{
+             color: #e6e6e6;
+            font-size: 15px;
+        }
+        hr{
+            border: 0;
+            border-top: 1px solid #6161611a;
+        }
+        section {
+            margin: 10% auto 70px;
+         }
+         section:first-child {
+            margin: 0;
+        }
+        .skills h5 {
+            margin:45px auto 20px;
+         }
+         a:hover {
+            color: #0056b3;
+            text-decoration: inherit;
+        }
+        button.btn.btn-link.btn-block.text-left {
+                color: white;
+            }
+        /* MAIN */
+        main.main {
+            margin: 20px auto;
+        }
+        .card-header {
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        /* SLIDE */
+
+        .slide{
+        max-width: inherit;
+        margin:0px auto;
+        padding: 50px 15px;
+        /* z-index:    -1; */
+        }
+
+        .slide span{ 
+           color: #fff;
+        font-size: 13px;
+        opacity: .9;
+        padding: 0 19px;
+        display: block;
+        opacity: 0.7;
+        }
+        .slide span:first-child{
+            float: left;
+            
+        }
+        .slide span.more{
+            float: right;
+            
+        }
+        /* RESETS */
+        .progress span.badge.badge-light {
+            position: absolute;
+         
+        }
+        
+        .p-0 {
+            padding: 0;
+        }
+        .btn-warning {
+            color: #212529;  
+            border-color: #e5143a;
+            color: white;
+        }
+        .bg-warning, .btn-warning {
+            background-color: #e5143a!important;
+        }
+         
+    
+        div#carouselExampleIndicators img {
+            padding: 8px 0;
+            max-width: 290px;
+        }
+
+        /* RESETS */
+
+         /* MENU APP : START*/
+         
+            div#navbarToggleExternalContent .p-4 {
+            max-width: 250px;
+            }
+         
+            div#navbarToggleExternalContent a[bedge='new']:before {
+                left: 0px;
+                right: inherit;
+                top: -25px;
+                bottom: inherit;
+            }
+             
+            .text-muted {
+                color: #d2cfcf!important;
+            }
+         @media(min-width: 1000px){
+            .elements {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.8rem;
+            }
+            div#navbarToggleExternalContent {
+                    margin: 20px auto;
+                }
+
+                .skill {
+                    justify-content: end !important;
+                    margin: 45px auto 0!important;
+                    padding: 0 !important;
+                }
+         }
+          /* MENU APP : END */
+        section.header { 
+            height: 90vh;  
+        }
+        .navbar-dark .navbar-toggler{
+            border:0;
+        }
+        .btn-primary{
+            background-color: transparent;
+            border: 0;
+        }
+        
+        .card,.list-group-item {
+            background-color: transparent;border: 0;
+        }
+        ul.list-group.list-group-flush li {
+            border: 0;
+            border-top-right-radius: 0
+        }
+        .gallery {
+        margin: 5% auto;
+        }
+        .lead{
+            max-width: 730px;
+            margin: 40px 0;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* SOCIAL MEDIA  */
+
+        #social_media{
+            cursor: pointer;
+        }
+        div#social_media a {
+            border: 2px solid #fff;
+            border-radius: 70px;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin:0 5px;
+        }
+      
+        .social-group { display: flex;color:#fff;float: right;}
+        .social-group a {
+            width: 30px;
+            margin: 0 4px;
+            display: flex;
+            align-items: center;
+            border: 1.5px solid #fff;
+            height: 30px;
+            padding: 8px;
+            border-radius: 33px;
+            transform: scale(1);
+            transition: .2s;
+        }
+        .social-group a:hover {
+            transform: scale(0.9);
+            transition: .2s;
+        }
+        a[bedge='new']{  
+            position: relative; 
+        }
+         a[bedge='new']:before {
+            content: "New";
+            position: relative;
+            bottom: 22px;
+            font-size: 9px;
+            background: #4f72f3;
+            color: white;
+            padding: 3px;
+            position: absolute;
+            border-radius: 5px;
+            right: 0;
+            text-transform: uppercase;
+        }
+        
+        /* SOCIAL MEDIA  */
+
+        h1{
+        margin: 55vh 0 40px;
+        padding: 0 10px;
+        }
+      @media (min-width: 768px) {
+        h1 strong {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 2.8em;
+            letter-spacing: -6px;
+            text-transform: capitalize;
+        }
+
+         h1{
+            margin: 10vh 0 40px;
+            white-space: nowrap;
+        }
+     
+        div#carouselExampleIndicators {
+            padding: 0px 97px 0;
+            
+        }
+        section.header {
+            margin: 25% auto 20%;
+            height: 60vh;  
+        }
+        div#social_media { 
+            position: absolute;
+            width: 100%;
+            bottom: -30vh;
+            padding: 0 35px;
+        }
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        section.header {
+            margin: 0 auto;  
+            display: block;
+            align-items: center;
+            height:95vh;  
+
+            
+        }
+        h1   {     
+                margin: 7em 0px 2em;
+                font-size: 2rem !important; 
+                padding: 0 3em;
+                
+        }
+     
+        .progress span.badge.badge-light {
+            position: absolute;
+            margin-left: -70px;
+        }
+        
+        
+      }
+
+      @media (max-height: 768px) {
+
+        hr {
+        border: 0;
+        border-top: 1px solid #171742;
+        }
+        section {
+            margin: 10% auto;
+        }
+        div#social_media {  
+             bottom: -115px;
+        }
+        .overlay {
+            
+            height: 28vh;
+            
+        }
+      }
+      @media (min-width: 1300px) {    
+          
+           body{
+            background: #10102f url(bg-fish.jpg);
+            background-repeat: no-repeat;
+            background-position: 70px 9px;
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            background-size: contain;
+            background-size: 91%;
+             
+        }
+         h1   {     
+            
+                white-space: nowrap;
+        }
+        h1 strong {
+       
+            font-size: 3.8em;
+            
+        }
+        
+        .container {
+            min-width: 1300px;
+        }
+      }
+
+      @media (min-width: 1800px) {    
+      
+        h1{
+            margin: 14em 0px 0;
+        }
+      }
+      
+    </style> 
+  </head>
+
+
+
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg text-white bg-transparent">
+            <div class="container-fluid">
+              <a class="navbar-brand h6 text-white" href="#">Vinicius Araujo</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    
+                  <li class="nav-item">
+                    <a class="nav-link active text-white btn-danger" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalOne">Fale Comigo</a>
+                  </li> 
+                </ul>
+                
+              </div>
+            </div>
+          </nav> 
+    </header>
+
+    <main role="main" class="main">
+    
+        <div class="container marketing">  
+            
+            <section class="header"> 
+                <div class="row featurette">
+                    <div class="col-6 col-md-6">
+                        <nav class="navbar navbar-dark p-0">
+                            <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <!-- <img src="img/menu.png" alt="" width="29px" class=""> -->
+                            </button>   
+                        </nav>
+                    </div>
+
+                    <div class="col-6 col-md-6 text-right"> 
+                        <a href="https://wa.me/+5511910451115?text=" class="text-white"><i class="fab fa-whatsapp" style="font-size: 25px;"></i></a>
+                    </div>
+                </div>    
+    
+                <div class="row featurette">
+                    <div class="col-md-12 col-lg-12">  
+                        <h1 class="display-4 mb-2 p-0">Transformando idéias em </br><strong>experiências!</strong></h1> 
+                        <h5 class="text-white">Designer Desenvolvedor Front-end de Lojas Virtuais e aplicações responsivas</h5> 
+                    </div> 
+                    
+                    <div class="col-md-12 col-lg-12 text-right">  
+                        <div id="social_media" class="d-none d-sm-block"></div> 
+                    </div> 
+                </div>
+                
+        </section>   
+
+        <hr>
+
+        <section>    
+            
+        <div class="row">
+            
+
+        <div class="col-md-2">
+            <h5>Contrate</h5>
+        </div>
+        <div class="col-md-8">
+                <h3 class="h1">Web Designer <strong>Freelancer</strong></h3>
+                <h5 class="text-white">Veja como posso contribuir para seu projeto digital:</h5>
+                <div class="skill d-flex p-4 w-100 justify-content-center" hidden>
+                    <i class="fab fa-react text-secondary" style="font-size: 50px;"></i>
+                    <i class="fab fa-vuejs text-secondary mr-4 ml-4" style="font-size: 50px;"></i>
+                    <i class="fab fa-angular text-secondary" style="font-size: 50px;"></i>
+                </div>
+        </div>
+        <div class="col-md-2">
+            <!-- <button class="btn-danger">Fale Comigo</button> -->
+            <a class="nav-link active text-white btn-danger text-center" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalOne">Fale Comigo</a>
+        </div>
+        </div>
+        </section>  
+        
+        <hr class="featurette-divider"> 
+        
+        <section id="skills" class="skills">
+            <div class="row featurette">
+                
+                <div class="col-md-2 col-sm-12">  
+                    <h5>Expêriencias</h5>
+                </div>
+            
+                <div class="col-md-10 col-sm-12">
+                    <h2 class="featurette-heading">Empresas e projetos que participei.</h2> 
+                    <p class="lead">Meu objetivo é humanizar a relação entre produtos e pessoas, aproximar de maneira agrádavel, o melhor de um produto a necessidade do consumidor...</p>
+                    </div> 
+                </div>   
+
+                <!-- CORPORATES -->
+                
+                <div class="row featurette">
+                    <div class="col-md-2">  
+                        <h5 class="text-left d-block d-sm-none w-100">Expêriencias</h5>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" >
+                            <ul class="list-group list-group-flush">
+
+                                <li>
+                                    <div class="accordion" id="accordionExample"> 
+                                        <div class="card">
+                                            <div class="card-header" id="headingProdesp">
+                                                <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseProdesp" aria-expanded="false" aria-controls="collapseProdesp">
+                                                    <span class="badge badge-light">2021</span> Prodesp
+                                                </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseProdesp" class="collapse" aria-labelledby="headingProdesp" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                <p>Desenvolvedor de aplicações responsivas na Prodesp. Companhia de Processamento de Dados do Estado de São Paulo/Brasil.</p>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </li>    
+                                
+                                <li>
+                                    <div class="accordion" id="accordionExample"> 
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                    <span class="badge badge-light">2012 - 2012</span> Hp Brasil
+                                                </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                <p>Minha primeira expêriencia, em uma grande corporação no mercado de tecnologia, foi muito proveitoso, 
+                                                    pude conhecer pessoas e me integrar a cultura de tecnologia. Aprendi a entender 
+                                                    problemas reais e ajudar a resolve-los. </p>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </li>    
+                                
+                                <li>
+                                    <div class="accordion" id="accordionExample">
+            
+                                        <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span class="badge badge-light"> 2014 - 2014</span> Home Brasil
+                                            </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                            <p>Depois de ter feito um bom trabalho, fui indicado a participar 
+                                                da equipe da <a target="_blank" href="https://www.homebrasil.com/">Home Brasil.</a> </br></br>Minhas principais atividades foi desenvolver aplicações responsivas utilizando frameworks de interfaces, 
+                                            Bootstrap, Foundation, Wave. Além das tasks de apps responsivos, era muito comum, 
+                                            ter um grande numero de e-mails marketing, feitos no esquema table.</p>
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+
+                                <li hidden>
+                                    <div class="accordion" id="accordionExample">
+                                
+                                        <div class="card">
+                                        <div class="card-header" id="headingEight">
+                                            <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                <span class="badge badge-light"> 2016 - 2017</span> Hotel Santa Cruz
+                                            </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                            <p>dasdas</p>
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+                                
+                                
+                                <li>
+                                    <div class="accordion" id="accordionExample">
+                                
+                                        <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <span class="badge badge-light"> 2016 - 2019</span> Zfast
+                                            </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p> <a target="_blank" href=""> Zfast agência </a></a> de desenvolvimento <br>E-commerce, com uma fantástica equipe, minha função foi criar interfaces para novos negócios
+                        , integrar a recursos e apis da plataforma <a href="https://www.fastcommerce.com.br/" target="_blank">Fastcommerce</a> e resolver recursos pontuais de interfaces, para cada negócio.</p>
+                                        
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="accordion" id="accordionExample">
+                                
+                                        <div class="card">
+                                        <div class="card-header" id="headingFour">
+                                            <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <span class="badge badge-light"> 2017 - 2019</span> Fastcommerce
+                                            </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                            <p> <a href="https://www.fastcommerce.com.br/" target="_blank">Fastcommerce</a>, plataforma de comércio eletrônico. Após ter criado boas lojas, com os recursos do Fastcommerce, 
+                                                fui convidado a contribuir para o design e desenvolvimento UI para Dashboard da plataforma.</p>
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="accordion" id="accordionExample">
+                                
+                                        <div class="card">
+                                        <div class="card-header" id="headingFive">
+                                            <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                <span class="badge badge-light"> 2018 - 2019</span> RioSlumSlum
+                                            </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                            <p> <a target="_blank" href="https://rioslumstudio.com">RioSlumSlum</a> agência Norte Americana, design e desenvolvimento de aplicações. Participei de projetos bem importantes como <a target="_blank" href="https://charliekirk.com/">Charlie Kirk</a>  e <a target="_blank" href="https://rioslumstudio.com/#/portfolio/power-to-grow"> power-to-grow. </a></p>
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="accordion" id="accordionExample">
+                                
+                                        <div class="card">
+                                        <div class="card-header" id="headingSix">
+                                            <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                <span class="badge badge-light"> 2018 - 2019</span> Express E-commerce
+                                            </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                            <p class=""><a target="_blank" href="https://www.ecommerceexpress.com.br/">Express</a> agência de desenvolvimento 
+                                                e-commerce, focada em projetos rápidos, com Magento, JetNeo e Loja integrada. <a target="_blank" href="https://ludysemijoias.plataformaneo.com.br/">Lush</a> é um dos preferidos,</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="accordion" id="accordionExample">
+                                
+                                        <div class="card">
+                                        <div class="card-header" id="headingSeven">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                    <span class="badge badge-light"> 2021 - 2021</span> Couchi Marketing
+                                            </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                            <p class="">Agência de marketing e social media, funciona como consultoria, desenvolvo apps responsivos com Wordpress.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-1">  
+                        <h5 class="text-left d-block d-sm-none w-100">Habilidades</h5> 
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" >
+                            <ul class="list-group list-group-flush">
+                             
+                                <li class="list-group-item">
+                                    <div class="progress">
+                                        <span class="badge badge pt-1"> Photoshop</span> 
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> 
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="progress">
+                                        <span class="badge badge pt-1"> HTML 5</span> 
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> 
+                                </li>
+                                <li class="list-group-item"> 
+                                    <div class="progress">
+                                        <span class="badge badge pt-1"> CSS 3</span>
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> 
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="progress"> 
+                                        <span class="badge badge pt-1"> JavaScript</span> 
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> 
+                                </li>  
+                           
+                                 
+                                
+                                
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            
+        </section>
+
+         <section id="portfolio">
+            <div class="row featurette">
+                <div class="col-md-2 col-sm-12">  
+                    <h5>Portfólio</h5>
+                </div>
+                <div class="col-md-10 col-sm-12">
+                    <h2 class="featurette-heading">Aplicações fluídas e intuitivas<br> veja recentes</h2> 
+                </div> 
+            </div> 
+            <div class="slide" widht="800px">  
+                <div class="row featurette d-none ">
+                    <div class="col-md-1 col-sm-1">   
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                    <span>Meus preferidos</span>
+                    </div> 
+                    <div class="col-md-4 col-sm-4">
+                        <span class="more">more</span>
+                    </div> 
+                </div>  
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                    
+                        <div class="carousel-item active">
+                            <div class="" style="display:flex;align-items: center;justify-content: center;"> 
+                            
+                            
+
+                                <img src="img/p_01.jpg" class="d-block w-100" alt="...">
+                                <img src="img/p_02.jpg" class="d-none d-sm-block d-lg-block w-100" alt="...">
+                                <img src="img/p_03.jpg" class="d-none d-sm-block d-lg-block w-100" alt="..."> 
+                            </div>
+                        </div>
+                    
+                        <div class="carousel-item">
+                            <div class="" style="display:flex;align-items: center;justify-content: center;"> 
+                                <img src="img/04.jpg" class="d-block w-100" alt="...">
+                                <img src="img/05.jpg" class="d-none d-sm-block d-lg-block w-100" alt="...">
+                                <img src="img/04.jpg" class="d-none d-sm-block d-lg-block w-100" alt="..."> 
+                            </div>
+                        </div>
+                    
+                        <div class="carousel-item">
+                            <div class="" style="display:flex;align-items: center;justify-content: center;"> 
+                                <img src="img/02.jpg" class="d-block w-100" alt="...">
+                                <img src="img/03.jpg" class="d-none d-sm-block d-lg-block w-100" alt="...">
+                                <img src="img/02.jpg" class="d-none d-sm-block d-lg-block w-100" alt="..."> 
+                            </div>
+                        </div>
+                    
+                        <div class="carousel-item">
+                            <div class="" style="display:flex;align-items: center;justify-content: center;"> 
+                                <img src="img/l_01.jpg" class="d-block w-100" alt="...">
+                                <img src="img/l_02.jpg" class="d-none d-sm-block d-lg-block  w-100" alt="...">
+                                <img src="img/l_03.jpg" class="d-none d-sm-block d-lg-block  w-100" alt="..."> 
+                            </div>  
+                        </div>  
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>   
+        
+        <hr class="featurette-divider"> 
+
+        <section id="about">
+            <div class="row featurette">
+                <div class="col-md-2 col-sm-12">  
+                    <h5>Sobre</h5>
+                </div>
+                <div class="col-md-10 col-sm-12">
+                    <h2 class="featurette-heading">Amor pela Criação e vontade de desenvolvimento.</h2> 
+                    <!-- <p class="lead">Meu primeiro projeto digital foi aos 15 de idade...Empolgado conheci prospectos e profissionais de comunicação e engajamento digital, me mudei para um resorte em troca de estratégias de engajamento, conheci pessoas incriveis e tive a oportunidade de participar do projeto de cinema mais criativo que conheço Tartarugas ninja longe das sombras o filme, criei um quis de interatividade com o filme, lá podiamos criar nosso pro´prio personagem com</p> -->
+                    <p class="lead">Designer Desenvolvedor de aplicações digitais, iniciei minha carreira em agências de Publicidade e criação, foi uma experiência incrivel fazer parte de projetos da <a target="_blank" href="https://www.homebrasil.com/">Home Brasil</a> e <a target="_blank" href="">RioSlum</a>.<br> <br> Me aprofundei no desenvolvimento web responsivo, ganhei experiência durante alguns anos na agência de desenvolvimento de e-commerce <a target="_blank" href="https://www.zfast.com.br/">Zfast</a>. Criei interfaces para lojas e contribuí para o desenvolvimento da Dashboard da Plataforma <a target="_blank" href="https://www.fastcommerce.com.br/"> Fastcommerce</a>. Há cerca de 4 anos, desenvolvo aplicações responsivas, e há pelo menos 3, trabalho no mercado de desenvolvimento de lojas virtuais utilizando diferentes plataformas.</p>
+                    <!-- <p class="lead">Meu propósito é harmonizar a relação entre produtos e pessoas, aproximar de maneira agrádavel o melhor de um produto a necessidade do consumidor...</p> -->
+                </div> 
+            </div> 
+        </section> 
+    
+        <hr class="featurette-divider"> 
+
+          <section class="cv">
+            <div class="row featurette">
+                <div class="col-md-2">   
+                </div> 
+                <div class="col-md-6"> 
+                    <h3>Precisa resolver algo? Fale comigo posso ajudar, se precisar pode me contratar também!</h3>
+                </div>
+                <div class="col-md-2">  
+                    <a target="_blank" href="va_curriculum.pdf">
+                        <button type="button" class="btn btn-warning" >Download CV
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M.5 8a.5.5 0 0 1 .5.5V12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8.5a.5.5 0 0 1 1 0V12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8.5A.5.5 0 0 1 .5 8z"/>
+                            <path fill-rule="evenodd" d="M5 7.5a.5.5 0 0 1 .707 0L8 9.793 10.293 7.5a.5.5 0 1 1 .707.707l-2.646 2.647a.5.5 0 0 1-.708 0L5 8.207A.5.5 0 0 1 5 7.5z"/>
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0v-8A.5.5 0 0 1 8 1z"/>
+                            </svg>
+                        </button>
+                    </a> 
+            </div>  
+            </div>
+        </section>  
+
+        <div class="modal" tabindex="-1" id="exampleModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Faça download do meu Curriculo.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Digite-seu E-mail" aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div> 
+        
+    
+
+        
+
+        
+    
+
+    </div> 
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-right"><a href="#">></a></p>
+        <p>&copy; 2021 Vinicius Araujo - Portfólio, Inc.</p>
+    </footer>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalOne" tabindex="-1" aria-labelledby="exampleModalOneLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+
+    <div class="modal-body border-0 p-0">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8ZZaFY8C-5KjPFnO2Zbz1XnWV9XS-DT3YFIeTHJmO2eDHHQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+    <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfqFuHa2jqG2eqsfhlPEeNyBY1lVr8MsKh7mrs0gnfzFibGAQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe> -->
+    </div>
+    <div class="modal-footer border-0">
+    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">x</button> -->
+    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+    </div>
+    </div>
+    </div>
+    </div>
+
+</body> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="assets/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<script src="assets/js/all.js"></script>
+</html>
+ 
